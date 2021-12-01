@@ -6,6 +6,6 @@ public class SoldierAndBananas {
         int k = sc.nextInt();
         int m = sc.nextInt();
         int w = sc.nextInt();
-        System.out.println((((w * (w + 1)) / 2) * k) - m > 0 ? (((w * (w + 1)) / 2) * k) - m : 0);
+        System.out.println(Math.max((((w * (w + 1)) / 2) * k) - m, 0));
     }
 }

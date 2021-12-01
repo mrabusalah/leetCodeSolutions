@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.math.BigDecimal;
 
-public class Main {
+public class AddBinary {
     public static void main(String[] args) throws IOException {
         System.out.println(
                 convertIntoBinary(
