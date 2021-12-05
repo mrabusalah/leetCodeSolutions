@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Main {
+public class DFS {
     static Scanner scanner = new Scanner(System.in);
     static boolean[] visited;
     static List<Integer>[] graph;
