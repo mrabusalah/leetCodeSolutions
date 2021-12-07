@@ -33,19 +33,25 @@ public class DFS {
 
     private static void dfs(int node) {
         Stack<Integer> stack = new Stack<>();
-
         stack.add(node);
+
         visited[node] = true;
 
         while (!stack.isEmpty()) {
             Integer pop = stack.pop();
             List<Integer> integers = graph[pop - 1];
-            for (Integer integer : integers) {
-                if (!visited[integer]) {
+            for (Integer integer : integers)
+                if (!visited[integer])
                     dfs(integer);
-                }
-            }
         }
+    }
+
+    private static void dfs_recursion(int node) {
+        visited[node] = true;
+        List<Integer> integers = graph[node - 1];
+        for (Integer integer : integers)
+            if (!visited[integer])
+                dfs_recursion(integer);
     }
 
     private static int countComponents() {
