@@ -21,6 +21,10 @@ public class MyLinkedList {
 
     public void deleteWithValue(int data) {
         if (head == null) return;
+        if(head.data == data){
+            head = head.next;
+            return;
+        }
         Node current = head;
         while (current.next != null) {
             if (current.next.data == data) {
@@ -67,7 +71,7 @@ class TestLinkedList {
         myLinkedList.printOut();
 
         myLinkedList.prepend(0);
-        
+
         myLinkedList.printOut();
     }
 }
